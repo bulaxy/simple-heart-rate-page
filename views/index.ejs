@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body style="color:white; font-size: 100px;"></body>
+<script>
+  setInterval(() => {
+    fetch('/update')
+      .then(response => response.json())
+      .then(data => {
+        const hr = document.querySelector("body");
+        hr.textContent = data;
+      });
+  }, 100);
+</script>
+</html>
